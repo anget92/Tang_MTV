@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Conoce a mi familia!</h1>
+
+    <h2>Los integrantes son:</h2>
+    {% for integrante in lista %}
+        {% if integrante.genero == 'Masculino' %}
+        <p> El es {{ integrante.nombre }} {{ integrante.apellido }}, nació en {{integrante.fecha_nacimiento}}, es el {{integrante.parentezco}}, es {{integrante.ocupacion}} y tiene {{integrante.edad}} años</p> 
+        {% else %}
+        <p> Ella es {{ integrante.nombre }} {{ integrante.apellido }}, nació en {{integrante.fecha_nacimiento}}, es la {{integrante.parentezco}}, es {{integrante.ocupacion}} y tiene {{integrante.edad}} años</p> 
+        {% endif %}
+    {% endfor %}
+    
+</body>
+</html>
